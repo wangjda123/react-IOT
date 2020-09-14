@@ -46,11 +46,11 @@ export default class Admin extends Component {
     }
 
     render () {
-        // const user = memoryUtils.user
-        // console.log('user',user)
-        // if(!user.role) {
-        //     return <Redirect to='/login'/>
-        // }
+        const user = memoryUtils.user
+        console.log('user',user)
+        if(!user.username) {
+            return <Redirect to='/login'/>
+        }
         return (
             <Layout style={{height: '100%'}}>
                 <Sider>

@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import ScrollBoard from "@jiaminghi/data-view-react/es/scrollBoard";
+import {BorderBox1} from "@jiaminghi/data-view-react";
 
 
 export default class SwitchTable extends Component {
@@ -9,7 +10,7 @@ export default class SwitchTable extends Component {
 
         this.config = {
             header: ['设备名称','温度', '湿度'],
-            headerBGC: '#041D1E',
+            headerBGC: '#0D5DFF',
             headerHeight: 30,
 
             data: [
@@ -26,13 +27,20 @@ export default class SwitchTable extends Component {
             ],
             oddRowBGC: 'transparent',
             evenRowBGC: 'transparent',
-            rowNum: 4,
+            rowNum: 5,
         }
     }
 
     render() {
         return (
-            <ScrollBoard config={this.config} style={{width: '100%', height: '150px'}} />
+            <div style={{width: '100%', height: '100%'}}>
+                <div className="div-title">
+                    开关柜除湿机
+                </div>
+                <div className="scroll-div">
+                    <ScrollBoard config={this.config}/>
+                </div>
+            </div>
         )
 
     }

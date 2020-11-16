@@ -51,15 +51,17 @@ export default class Admin extends Component {
         if(!user.username) {
             return <Redirect to='/login'/>
         }
+        let contentDom = document.querySelector('.contentDom')
+        console.log('contentDom in admin',contentDom)
         return (
             <Layout style={{height: '100%'}}>
                 <Sider>
                     <LeftNav/>
                 </Sider>
                 <Layout>
-                    <Header user = {this.state.user} />
+                    <Header user = {this.state.user} content = {contentDom}/>
 
-                    <Content style = {{margin: '10px 10px 0px 10px',backgroundColor: 'white'}}>
+                    <Content className={'contentDom'} style = {{margin: '10px 10px 0px 10px',backgroundColor: 'white'}}>
                         <Switch>
 
                             <Route path = '/charts/machineCharts' component={MachineCharts} />
@@ -71,14 +73,14 @@ export default class Admin extends Component {
                             <Route path = '/error/errorData' component={Error} />
                             <Route path = '/error/errorSet' component={ErrorSet} />
 
-                            <Route path = '/model' component={Model} />
+                            <Route path = '/home' component={Home} />
                             <Route path = '/test' component={Test} />
 
                             <Route path = '/user/userList' component={User} />
                             <Route path = '/user/role' component={Role} />
 
                             {/* 不点击就跳转 home */}
-                            <Redirect to={'/model'} />
+                            <Redirect to={'/home'} />
                         </Switch>
 
                     </Content>

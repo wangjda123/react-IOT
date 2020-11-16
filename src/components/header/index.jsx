@@ -14,13 +14,22 @@ import './index.less'
 export default class Header extends Component {
     constructor(props) {
         super(props);
-        this.ClickAll = this.ClickAll.bind(this)
+        this.ClickAllScreen = this.ClickAllScreen.bind(this)
         this.ClickHelp = this.ClickHelp.bind(this)
         this.ClickLogOut = this.ClickLogOut.bind(this)
     }
 
-    ClickAll = () => {
-
+    ClickAllScreen = () => {
+        console.log('content!!!!',this.props.content)
+        let contentDom = this.props.content
+        this.requestFullScreen(contentDom)
+    }
+    requestFullScreen(element) {
+        var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+        console.log('requestMethod', requestMethod)
+        if (requestMethod) {
+            requestMethod.call(element);
+        }
     }
 
     ClickHelp = () => {
@@ -65,7 +74,8 @@ export default class Header extends Component {
 
                 <a className='help right' onClick={this.ClickHelp}>帮助</a>
 
-                
+                <a className='help right' onClick={this.ClickAllScreen}>全屏</a>
+
             </div>
         )
     }

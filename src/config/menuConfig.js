@@ -10,7 +10,7 @@ import {
 const menuList = [
     {
         title: '可视化',     // 菜单栏名称
-        key: '/model',         // 对应的path
+        key: '/home',         // 对应的path
         icon: <EyeOutlined />,   // 图标名称
     },
 

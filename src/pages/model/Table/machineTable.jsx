@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import ScrollBoard from "@jiaminghi/data-view-react/es/scrollBoard";
+import {BorderBox1} from "@jiaminghi/data-view-react";
 
 
 export default class MachineTable extends Component {
@@ -9,7 +10,7 @@ export default class MachineTable extends Component {
 
         this.config = {
             header: ['设备名称','储能电流', '分闸电流', '合闸电流'],
-            headerBGC: '#041D1E',
+            headerBGC: '#0D5DFF',
             headerHeight: 30,
             data: [
                 ['#1电容器','3.89 A', '1.95 A', '0.3 A'],
@@ -25,13 +26,20 @@ export default class MachineTable extends Component {
             ],
             oddRowBGC: 'transparent',
             evenRowBGC: 'transparent',
-            rowNum: 4,
+            rowNum: 5,
         }
     }
 
     render() {
         return (
-            <ScrollBoard config={this.config} style={{width: '100%', height: '180px'}} />
+            <div style={{width: '100%', height: '100%'}}>
+                <div className="div-title">
+                    机械特性
+                </div>
+                <div className="scroll-div">
+                    <ScrollBoard config={this.config}/>
+                </div>
+            </div>
         )
 
     }

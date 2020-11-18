@@ -21,7 +21,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 npm run build<br />
 打包项目<br />
-打包完的项目为build.zip<br />
+打包完的项目为build文件夹<br />
 项目就在根目录下<br />
 
 The build is minified and the filenames include the hashes.<br />

@@ -36,7 +36,7 @@ export default class DuanEcharts extends Component {
                 text: '端子箱除湿机温湿度图',
                 left: 'left',
                 textStyle: {
-                    // color: '#fff'
+                    color: '#fff'
                 }
             },
 
@@ -70,11 +70,11 @@ export default class DuanEcharts extends Component {
                     lineHeight: 50,
                     fontSize: 20,
                     fontWeight: 'bold',
-                    // color: '#000000',
+                    color: '#000000',
                 },
                 axisLine: {
                     lineStyle: {
-                        // color: '#fff'
+                        color: '#fff'
                     }
                 },
             },
@@ -90,7 +90,7 @@ export default class DuanEcharts extends Component {
                 },
                 axisLine: {
                     lineStyle: {
-                        // color: '#fff'
+                        color: '#fff'
                     }
                 },
             },
@@ -113,8 +113,8 @@ export default class DuanEcharts extends Component {
                 axisPointer: {
                     type: 'cross',
                     label: {
-                        // color: '#000000',
-                        // backgroundColor: 'rgba(255,255,255,0.5)'
+                        color: '#000000',
+                        backgroundColor: 'rgba(255,255,255,0.5)'
                     },
                 }
             },
@@ -144,7 +144,7 @@ export default class DuanEcharts extends Component {
                     // smooth : true,
 
                     itemStyle: {
-                        // color: '#BCEE68',
+                        color: '#BCEE68',
                     },
 
                     // lineStyle: {

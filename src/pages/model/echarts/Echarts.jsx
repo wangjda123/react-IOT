@@ -88,7 +88,7 @@ export default class Echarts extends Component {
                 text: this.props.name,
                 left: 'left',
                 textStyle: {
-                    // color: '#fff'
+                    color: '#fff'
                 }
             },
 
@@ -114,7 +114,7 @@ export default class Echarts extends Component {
                 },
                 axisLine: {
                     lineStyle: {
-                        // color: '#fff'
+                        color: '#fff'
                     }
                 },
             },
@@ -127,7 +127,7 @@ export default class Echarts extends Component {
                 },
                 axisLine: {
                     lineStyle: {
-                        // color: '#fff'
+                        color: '#fff'
                     }
                 },
             },],
@@ -142,8 +142,8 @@ export default class Echarts extends Component {
                 axisPointer: {
                     type: 'cross',
                     label: {
-                        // color: '#000000',
-                        // backgroundColor: 'rgba(255,255,255,0.5)'
+                        color: '#000000',
+                        backgroundColor: 'rgba(255,255,255,0.5)'
                     },
                 }
             },

@@ -1,3 +1,30 @@
+## build过程
+### 环境
+1. 安装npm 下载地址：https://npm.taobao.org/mirrors/node/v10.14.1/node-v10.14.1-linux-x64.tar.gz，
+```
+tar -xzf node-v10.14.1-linux-x64.tar.gz
+mv node-v10.14.1-linux-x64 node
+```
+2. 配置环境变量到.bashrc
+```
+export NODE_HOME=/home/jenkins/node  
+export PATH=$NODE_HOME/bin:$PATH
+```
+3. 重新登录jenkins用户运行如下命令
+```
+npm install npm -g
+npm install -g react-app-rewired
+npm install
+```
+### 构建
+下载代码，在根目录运行
+```
+npm run build
+```
+生成的build文件夹即为交付件。
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
